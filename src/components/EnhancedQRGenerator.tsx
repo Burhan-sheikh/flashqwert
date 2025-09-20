@@ -15,7 +15,8 @@ import {
   Calendar,
   Timer,
   Shield,
-  Upload
+  Upload,
+  X
 } from 'lucide-react';
 import { QRCodeCanvas } from 'qrcode.react';
 import { useAuth } from '../context/AuthContext';
