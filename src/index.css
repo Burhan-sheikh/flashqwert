@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --- Base Styles for About Page --- */
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+  }
+}
+
+/* --- Your Existing Custom Styles --- */
+.flash-title {
+  display: inline-block;
+  font-family: 'Orbitron', sans-serif; /* Or any modern, geometric font */
+  letter-spacing: 0.05em; /* Subtle letter spacing */
+  text-transform: ; /* Optional: Makes it bolder */
+  color: #333; /* Dark gray for readability */
+  font-size: 14px;
+  font-weight: 700; /* Bold font weight */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+@media (max-width: 768px) {
+  .flash-title {
+    font-size: 14px; /* Adjust font size on smaller screens */
+  }
+}
+
+/* --- Footer custom star --- */
+.custom-star {
+    fill: #FFDA63;
+}
+.logo-container {
+  display: flex;
+  align-items: center; /* Vertically align logo and title */
+}
+
+.dual-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  flex-direction: column; /* Stack content vertically */
+}
+
+/* --- Your Existing Button Styles --- */
+.button-primary {
+    @apply inline-flex items-center px-6 py-3 rounded-2xl font-bold text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    background: linear-gradient(to right, theme('colors.blue.600'), theme('colors.purple.600'));
+    color: theme('colors.white');
+}
+
+.button-primary:hover {
+    background: linear-gradient(to right, theme('colors.blue.700'), theme('colors.purple.700'));
+}
+
+.button-secondary {
+    @apply inline-flex items-center px-6 py-3 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5;
+    background: linear-gradient(to right, theme('colors.green.600'), theme('colors.green.700'));
+    color: theme('colors.white');
+}
+
+.button-secondary:hover {
+    background: linear-gradient(to right, theme('colors.green.700'), theme('colors.green.800'));
+}
+
+.button-secondary-outline {
+    @apply inline-flex items-center px-6 py-3 transition-colors border rounded-xl hover:bg-gray-50 transform hover:-translate-y-0.5;
+    color: theme('colors.gray.600');
+    border-color: theme('colors.gray.300');
+}
+
+.button-secondary-outline:hover {
+    color: theme('colors.gray.800');
+}
+
+.button-primary-danger {
+    @apply inline-flex items-center px-6 py-3 rounded-xl text-white transition-colors transform hover:-translate-y-0.5;
+    background-color: theme('colors.red.600');
+}
+
+.button-primary-danger:hover {
+    background-color: theme('colors.red.700');
+}
+
+.button-disabled {
+    @apply bg-gray-300 text-gray-500 cursor-not-allowed !important; /* !important to override other styles */
+}
+
+@media (max-width: 768px) {
+    .button-primary,
+    .button-secondary,
+    .button-secondary-outline,
+    .button-primary-danger {
+        @apply px-4 py-2 text-base; /* Smaller padding and font size */
+    }
+
+    .button-full-width-sm {
+        width: 100%;
+    }
+}
+
+/* --- New Utility Classes for About Page --- */
+@layer utilities {
+  .transform-style-3d { 
+    transform-style: preserve-3d; 
+  }
+  .section-hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .section-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .animate-subtle-glow {
+    animation: subtle-glow 8s ease-in-out infinite;
+  }
+}
+
+/* --- New Keyframe Animations for About Page --- */
+@keyframes subtle-glow {
+  0%, 100% { 
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.1), 0 0 45px rgba(59, 130, 246, 0.08); 
+  }
+  50% { 
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.2), 0 0 55px rgba(59, 130, 246, 0.15); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes aurora {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+
+
+.qr-preview-border {
+  box-shadow:
+    0 4px 20px 0 rgba(0,0,0,0.12),
+    0 0 0 4px #E5E7EB;
+  border: 1px solid #D1D5DB;
+  background: #fff;
+}
+
+.no-scroll {
+  overflow: hidden !important; /* !important to ensure it overrides other styles */
+  height: 100vh; /* prevent content shift */
+}
