@@ -34,6 +34,8 @@ import AdminDashboard from './pages/AdminDashboard';
 import LogOutHome from './pages/LogOutHome';
 import ResetPassword from './pages/ResetPassword';
 import LearningCenter, { LearningCenterRoutes } from './pages/LearningCenter';
+import EnhancedQRGeneratorPage from './pages/EnhancedQRGenerator';
+import EnhancedRedirectQr from './pages/EnhancedRedirectQr';
 
 // Auth Context
 import { useAuth } from './context/AuthContext';
@@ -75,6 +77,7 @@ function App() {
 
               {/* QR Code Pages */}
               <Route path="/generator" element={<QRGenerator />} />
+              <Route path="/enhanced-generator" element={<EnhancedQRGeneratorPage />} />
 
               {/* New QR Management Pages */}
               <Route
@@ -86,6 +89,7 @@ function App() {
                 element={user ? <UpdateQR /> : <Navigate to="/login" replace />}
               />
               <Route path="/r/:shortId" element={<RedirectQr />} />
+              <Route path="/e/:shortId" element={<EnhancedRedirectQr />} />
 
               {/* Informational Pages */}
               <Route path="/about" element={<About />} />

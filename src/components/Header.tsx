@@ -311,6 +311,20 @@ const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
                                                 <span>{link.label}</span>
                                             </NavLink>
                                         ))}
+                                        <NavLink
+                                            to="/enhanced-generator"
+                                            onClick={closeMenu}
+                                            className={({ isActive }) =>
+                                                `flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 ${
+                                                    isActive
+                                                        ? 'bg-purple-50 text-purple-600 border-l-4 border-purple-600'
+                                                        : 'text-gray-700 hover:bg-gray-50'
+                                                }`
+                                            }
+                                        >
+                                            <Layers className="w-5 h-5" />
+                                            <span>Enhanced Generator</span>
+                                        </NavLink>
                                     </div>
                                     {/* Legal Links */}
                                     <div className="mt-8 pt-4 border-t border-gray-200">

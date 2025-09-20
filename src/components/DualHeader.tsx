@@ -23,7 +23,8 @@
                           location.pathname === '/static-code' || 
                           location.pathname === '/dynamic-code' || 
                           location.pathname === '/generate' || 
-                          location.pathname === '/bulk-generator';
+                          location.pathname === '/bulk-generator' ||
+                          location.pathname === '/enhanced-generator';
   const isHomePage = location.pathname === '/';
   const shouldShowHero = isHomePage && !user;
 
@@ -43,6 +44,16 @@
   >
   <QrCode className="w-4 h-4 mr-2" />
   QR Generator
+  </Link>
+  <Link
+  to="/enhanced-generator"
+  className={`flex-1 flex items-center justify-center text-sm font-medium transition-all duration-200 ${isGeneratorPage
+  ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white border-b-2 border-purple-600'
+  : 'text-gray-600 hover:text-purple-600 hover:bg-purple-50'
+  }`}
+  >
+  <Layers className="w-4 h-4 mr-2" />
+  Enhanced Generator
   </Link>
   </div>
   </div>
