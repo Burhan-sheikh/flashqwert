@@ -77,7 +77,6 @@ function App() {
 
               {/* QR Code Pages */}
               <Route path="/generator" element={<QRGenerator />} />
-              <Route path="/enhanced-generator" element={<EnhancedQRGeneratorPage />} />
 
               {/* New QR Management Pages */}
               <Route
