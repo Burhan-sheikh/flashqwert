@@ -6,6 +6,7 @@
 @layer base {
   body {
     @apply bg-slate-50 text-slate-800 antialiased;
+    margin: 0; /* remove default margin */
   }
 }
 
