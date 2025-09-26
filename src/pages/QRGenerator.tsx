@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { db } from '../firebase/firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import { motion } from 'framer-motion';
-import { AlertCircle, CheckCircle2, Zap, Target, Layers } from 'lucide-react';
+import { CircleAlert as AlertCircle, CircleCheck as CheckCircle2, Zap, Target, Layers } from 'lucide-react';
 import QRGenerator from '../components/QRGenerator';
 import { getQuotaForPlan } from '../utils/planConfig';
 

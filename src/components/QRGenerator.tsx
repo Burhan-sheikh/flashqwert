@@ -1,35 +1,6 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, 
-  Target, 
-  Settings, 
-  Palette, 
-  Download, 
-  Eye, 
-  Save, 
-  RefreshCw,
-  AlertCircle,
-  CheckCircle,
-  Lock,
-  Calendar,
-  Timer,
-  Shield,
-  Upload,
-  X,
-  ArrowRight,
-  Sparkles,
-  Play,
-  Layers,
-  Globe,
-  FileText,
-  User,
-  Wifi,
-  Mail,
-  Phone,
-  MessageSquare,
-  MapPin
-} from 'lucide-react';
+import { Zap, Target, Settings, Palette, Download, Eye, Save, RefreshCw, CircleAlert as AlertCircle, CircleCheck as CheckCircle, Lock, Calendar, Timer, Shield, Upload, X, ArrowRight, Sparkles, Play, Layers, Globe, FileText, User, Wifi, Mail, Phone, MessageSquare, MapPin } from 'lucide-react';
 import { QRCodeCanvas } from 'qrcode.react';
 import { useAuth } from '../context/AuthContext';
 import { db } from '../firebase/firebase';

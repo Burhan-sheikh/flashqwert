@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { QRContentType, CONTENT_TYPE_CONFIG } from '../types/qrContentTypes';
-import { AlertCircle } from 'lucide-react';
+import { CircleAlert as AlertCircle } from 'lucide-react';
 
 interface QRContentSelectorProps {
   selectedType: QRContentType;
