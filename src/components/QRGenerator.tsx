@@ -387,9 +387,7 @@ const QRGenerator: React.FC<QRGeneratorProps> = ({
     <div className="bg-white border-b border-gray-200 p-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex items-center justify-center">
-            <Layers className="w-5 h-5 text-white" />
-          </div>
+          
           <div>
             <h1 className="text-2xl font-bold text-gray-900">QR Code Generator</h1>
             <p className="text-sm text-gray-600">Professional QR code creation workflow</p>
