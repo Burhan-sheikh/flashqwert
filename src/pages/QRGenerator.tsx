@@ -152,7 +152,7 @@ const QRGeneratorPage: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+
   );
 };
 
