@@ -115,8 +115,8 @@ const QRGeneratorPage: React.FC = () => {
             userQuota={userQuota}
             onQuotaUpdate={setUserQuota}
           />
-        </div>
-      
+     
+      </div>
 
       {/* Footer Info */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -152,7 +152,7 @@ const QRGeneratorPage: React.FC = () => {
           </div>
         </div>
       </div>
-
+    </div>
   );
 };
 
