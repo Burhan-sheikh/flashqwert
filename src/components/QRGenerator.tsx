@@ -637,7 +637,7 @@ const QRGenerator: React.FC<QRGeneratorProps> = ({
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                className="bg-white rounded-3xl shadow-lg p-8 border border-gray-200"
+                className="p-8"
               >
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
