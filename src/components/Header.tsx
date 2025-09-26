@@ -18,7 +18,8 @@ import {
     ChevronDown,
     Settings,
     LogOut,
-    Shield
+    Shield,
+  Layers
 } from 'lucide-react';
 
 import SearchBar from './SearchBar'; // Assuming SearchBar is imported here
