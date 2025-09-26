@@ -20,7 +20,7 @@ import {
   CONTENT_TYPE_CONFIG
 } from '../types/qrContentTypes';
 import QRContentSelector from './QRContentSelector';
-
+import QRContentForm from './QRContentForms';
 import ColorPicker from './ColorPicker';
 import { toast } from 'react-hot-toast';
 import { v4 as uuidv4 } from 'uuid';
