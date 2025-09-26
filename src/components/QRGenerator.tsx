@@ -387,7 +387,7 @@ const QRGenerator: React.FC<QRGeneratorProps> = ({
     <div className="bg-white border-b border-gray-200 p-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <Layers className="w-5 h-5 text-white" />
           </div>
           <div>
