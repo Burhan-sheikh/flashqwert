@@ -412,51 +412,62 @@ const QRGenerator: React.FC<QRGeneratorProps> = ({
   );
 
   const StepIndicator = () => {
-    const steps = [
-      { id: 1, title: 'QR Type', icon: Target, completed: currentStep > 1 },
-      { id: 2, title: 'Content', icon: Layers, completed: currentStep > 2 },
-      { id: 3, title: 'Design', icon: Palette, completed: currentStep > 3 },
-      { id: 4, title: 'Generate', icon: CheckCircle, completed: showPreview }
-    ];
+  const steps = [
+    { id: 1, title: 'QR Type', icon: Target, completed: currentStep > 1 },
+    { id: 2, title: 'Content', icon: Layers, completed: currentStep > 2 },
+    { id: 3, title: 'Design', icon: Palette, completed: currentStep > 3 },
+    { id: 4, title: 'Generate', icon: CheckCircle, completed: showPreview }
+  ];
 
-    return (
-      <div className="bg-gray-50 border-b border-gray-200 p-6">
-        <div className="flex items-center justify-between max-w-2xl mx-auto">
-          {steps.map((step, index) => (
-            <React.Fragment key={step.id}>
-              <div className="flex flex-col items-center">
-                <button
-                  onClick={() => currentStep > step.id && setCurrentStep(step.id)}
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center border-2 transition-all ${
-                    step.completed 
-                      ? 'bg-blue-600 border-blue-600 text-white shadow-lg' 
-                      : currentStep === step.id 
-                        ? 'border-blue-600 text-blue-600 bg-blue-50 shadow-md' 
-                        : 'border-gray-300 text-gray-400 bg-white hover:border-gray-400'
-                  } ${currentStep > step.id ? 'cursor-pointer hover:scale-105' : ''}`}
-                >
-                  <step.icon className="w-5 h-5" />
-                </button>
-                <div className="mt-2 text-center">
-                  <div className={`text-sm font-semibold ${
-                    step.completed ? 'text-blue-600' : 
-                    currentStep === step.id ? 'text-blue-600' : 'text-gray-500'
-                  }`}>
-                    {step.title}
-                  </div>
-                </div>
-              </div>
-              {index < steps.length - 1 && (
-                <div className={`flex-1 h-1 mx-4 rounded-full transition-all ${
+  return (
+    <div className="bg-white border-b border-gray-200 py-4">
+      <div className="flex items-center justify-between max-w-xl mx-auto px-2">
+        {steps.map((step, index) => (
+          <React.Fragment key={step.id}>
+            {/* Step Button */}
+            <div className="flex flex-col items-center">
+              <button
+                onClick={() => currentStep > step.id && setCurrentStep(step.id)}
+                className={`w-10 h-10 rounded-lg flex items-center justify-center border transition-all duration-200
+                  ${step.completed 
+                    ? 'bg-blue-600 border-blue-600 text-white shadow-sm' 
+                    : currentStep === step.id 
+                      ? 'border-blue-500 text-blue-600 bg-blue-50' 
+                      : 'border-gray-300 text-gray-400 bg-white hover:border-gray-400'
+                  }
+                  ${currentStep > step.id ? 'cursor-pointer hover:scale-105' : ''}
+                `}
+              >
+                <step.icon className="w-4.5 h-4.5" />
+              </button>
+
+              {/* Step Title */}
+              <span
+                className={`mt-1.5 text-xs font-medium ${
+                  step.completed || currentStep === step.id
+                    ? 'text-blue-600'
+                    : 'text-gray-500'
+                }`}
+              >
+                {step.title}
+              </span>
+            </div>
+
+            {/* Connector */}
+            {index < steps.length - 1 && (
+              <div
+                className={`flex-1 h-0.5 mx-2 rounded-full transition-colors ${
                   step.completed ? 'bg-blue-600' : 'bg-gray-200'
-                }`} />
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+                }`}
+              />
+            )}
+          </React.Fragment>
+        ))}
       </div>
-    );
-  };
+    </div>
+  );
+};
+
 
   // Success Preview Component
   if (showPreview && generatedQR) {
