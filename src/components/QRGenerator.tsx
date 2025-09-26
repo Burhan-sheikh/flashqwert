@@ -641,8 +641,7 @@ const QRGenerator: React.FC<QRGeneratorProps> = ({
               >
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
-                   
-                  <div>
+                    
                     <h2 className="text-2xl font-bold text-gray-900">Choose QR Code Type</h2>
                     <p className="text-gray-600">Select the type that best fits your needs</p>
                   </div>
