@@ -385,27 +385,29 @@ const QRGenerator: React.FC<QRGeneratorProps> = ({
 
   const WorkflowHeader = () => (
     <div className="bg-white border-b border-gray-200 p-6">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900">QR Code Generator</h1>
-            <p className="text-sm text-gray-600">Professional QR code creation workflow</p>
-          </div>
-        </div>
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded-lg">
-            <Wrench className="w-4 h-4 text-gray-600" />
-            <span className="text-sm font-medium text-gray-700">Quota: {userQuota}</span>
-          </div>
-          <button
-            onClick={onClose}
-            className="w-8 h-8 bg-gray-100 hover:bg-gray-200 rounded-lg flex items-center justify-center transition-colors"
-          >
-            <X className="w-4 h-4 text-gray-600" />
-          </button>
-        </div>
-      </div>
+      <div className="flex items-center justify-between px-2 py-1">
+  {/* Left side: Title + Subtitle */}
+  <div>
+    <h1 className="text-lg font-semibold text-gray-900">QR Code Generator</h1>
+    <p className="text-xs text-gray-500">Create and manage QR codes</p>
+  </div>
+
+  {/* Right side: Quota + Close */}
+  <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1.5 bg-gray-50 px-2.5 py-1 rounded-md border border-gray-200">
+      <Wrench className="w-3.5 h-3.5 text-gray-500" />
+      <span className="text-xs font-medium text-gray-700">
+        {userQuota}
+      </span>
+    </div>
+    <button
+      onClick={onClose}
+      className="w-7 h-7 flex items-center justify-center rounded-md border border-gray-200 bg-white hover:bg-gray-50 transition"
+    >
+      <X className="w-3.5 h-3.5 text-gray-600" />
+    </button>
+  </div>
+</div>
     </div>
   );
 
