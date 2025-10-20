@@ -301,6 +301,7 @@ const QRGenerator: React.FC<QRGeneratorProps> = ({
         const finalQrData: EnhancedQRCodeData = {
           ...qrData,
           id: qrType === 'dynamic' ? qrData.shortId! : uuidv4(),
+          shortId: qrType === 'dynamic' ? qrData.shortId || generateShortId() : undefined,
           name: content.title || `${contentType.toUpperCase()} QR Code`,
           content,
           userId: user.uid,
